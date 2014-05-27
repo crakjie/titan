@@ -57,6 +57,17 @@
         <url>git@github.com:thinkaurelius/titan.git</url>
         <tag>HEAD</tag>
     </scm>
+    <repository>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype Nexus Snapshots</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
     <properties>
         <titan.compatible.versions>0.4.0,0.4.1,0.4.2,0.4.3</titan.compatible.versions>
         <tinkerpop.version>2.4.0</tinkerpop.version>
