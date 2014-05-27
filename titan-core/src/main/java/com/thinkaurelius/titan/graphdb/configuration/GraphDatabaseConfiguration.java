@@ -1119,7 +1119,8 @@ public class GraphDatabaseConfiguration {
                 AttributeHandler<?> serializer = null;
                 String classname = config.getString(key);
                 try {
-                    clazz = Class.forName(classname);
+                    println( Thread.currentThread().getContextClassLoader())
+                    clazz = Thread.currentThread().getContextClassLoader().loadClass(classname);
                 } catch (ClassNotFoundException e) {
                     throw new IllegalArgumentException("Could not find attribute class" + classname, e);
                 }
